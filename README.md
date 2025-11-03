@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  Ik loop op dit moment nog nergens tegen aan. Ik mijn html pagina volledig gemaakt en wil nu graag weten hoe ik deze kan gaan stijlen.
+  Ik loop op dit moment nog nergens tegen aan. Ik heb mijn html pagina volledig gemaakt en wil nu graag weten hoe ik deze kan gaan stijlen.
 
 
   ### Agenda voor meeting
