@@ -451,7 +451,6 @@ main section:nth-of-type(5) img{
 	width: 100%;
 	align-items: center;
 	justify-self: center;
-	padding: 0.5em;
 }
 
 main section:nth-of-type(5) h2{
@@ -494,7 +493,6 @@ main section:nth-of-type(5) button{
 }
 
 main section:nth-of-type(5) h3, main section:nth-of-type(5) h4, main section:nth-of-type(5) h5 {
-	padding-left: 0.5em;
 	margin: 0;
 	line-height: 1.8;
 }
@@ -502,6 +500,7 @@ main section:nth-of-type(5) h3, main section:nth-of-type(5) h4, main section:nth
 main section:nth-of-type(5) article {
 	display: flex;
 	flex-direction: column;
+    padding: 0.5em;
 }
 
 main section:nth-of-type(5) h2 {
