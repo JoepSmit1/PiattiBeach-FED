@@ -1,0 +1,946 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+
+
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  
+  
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  html {
+      /* startje */
+      --color-text:#111;
+      --color-background:#eee;
+      scroll-behavior: smooth;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /****************/
+  /* JOUW STYLING */
+  /****************/
+  
+  /* jouw code */
+
+/* Section 1 */
+main section:nth-of-type(1){
+    /* Bron position: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position */
+	position: relative;
+	background-color: var(--SectieAchtergrond1);
+}
+
+main section:nth-of-type(1) img{
+     /* Bron uitleg over grid: https://www.w3schools.com/css/css_grid.asp */
+    display: grid;
+	grid-row: 1;
+	grid-column: 1;
+	width:70%;
+	height: 80%;
+    /* Bron object-fit: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit */
+  	object-fit: cover;
+  	display: block;
+}
+
+main section:nth-of-type(1) h2 {
+	font-size: 2em;
+	font-family: "anton";
+	font-weight: 200;
+    color: var(--TekstRood);
+	padding-top: 2em;
+    width: 95%;
+    /* Bron line-height:https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/line-height */
+    line-height: 1;
+    justify-self: center;
+}
+
+main section:nth-of-type(1) p {
+	font-size: small;
+	font-family: "roboto";
+	font-weight: 200;
+	padding-left:2vw;
+    width: 90%;
+    color: var(--TekstRood);
+    line-height: 1.5;
+}
+
+main section:nth-of-type(1) p:last-of-type {
+	padding-bottom: 4em;
+    margin-bottom: 0;
+}
+
+/* Section 2 */
+main section:nth-of-type(2) {
+	display: grid;
+    /* Bron grid fitcontent: https://developer.mozilla.org/en-US/docs/Web/CSS/fit-content_function */
+	grid-template-columns: fit-content;
+	grid-template-rows: 1fr fit-content fit-content fit-content fit-content fit-content 1fr;
+	text-align: center;
+}
+
+
+main section:nth-of-type(2) img{
+	width: 31.3125em;
+	height: 20em;
+	width: 100%;
+    /* Bron Z-index: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/z-index */
+	z-index: 1000;
+}
+
+main section:nth-of-type(2) img:nth-of-type(1){
+	grid-row: 1/3;
+	grid-column: 1;
+	z-index: -1;
+	object-fit: cover; 
+  	display: block;
+}
+
+main section:nth-of-type(2) img:nth-of-type(2){
+	grid-row: 3/6;
+	grid-column: 1;
+	z-index: -1;
+	object-fit: cover;
+  	display: block;
+}
+
+main section:nth-of-type(2) img:nth-of-type(3){
+	grid-row: 7/9;
+	grid-column: 1;
+	object-fit: cover;
+  	display: block;
+}
+
+main section:nth-of-type(2) h2{
+	justify-self: center;
+	align-self: end;
+	grid-row: 3;
+	grid-column: 1;
+	font-size: 7.5vw;
+	margin-top: 0.1em;
+	z-index: 100;
+	color: var(--TekstWit);
+	font-family: "anton";
+	width: 25%;
+	line-height: 1;
+}
+
+main section:nth-of-type(2) p{
+	justify-self: center;
+	width: 70%;
+	grid-row: 4;
+	grid-column: 1;
+	align-self: start;
+	color: var(--TekstWit);
+	font-family: "roboto";
+	font-size: 2.5vw;
+	font-weight: 200 ;
+	margin: 0;
+}
+
+main section:nth-of-type(2) button{
+	grid-row: 5;
+	grid-column: 1;
+	z-index: 2;
+	align-self: start;
+	justify-self: center;
+	font-family: "inter";
+	font-weight: 200;
+	color: var(--TekstWit);
+	background-color: var(--Button);
+	border: 0;
+	height: 3em;
+	border-radius: 1.5em;
+	width: 30%;
+}
+
+/* Section 3 */
+main section:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content;
+    background-color: var(--SectieAchtergrond2);
+}
+
+main section:nth-of-type(3) h2 {
+    justify-self: center;
+    font-family: "anton";
+    font-weight: 300;
+    color: var(--TekstRood);
+    font-size: xx-large;
+}
+
+main section:nth-of-type(3) p {
+    justify-self: center;
+    font-family: "roboto";
+    font-weight: 300;
+    color: var(--TekstRood);
+    line-height: 1.5;
+    font-size: small;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main section:nth-of-type(3) button {
+    border-radius: 1.5em;
+    height: 3em;
+    color: var(--SectieAchtergrond1);
+    background-color: var(--Button);
+    width: 30%;
+    border: 0;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+}
+
+
+/* Section 4 */
+main section:nth-of-type(4){
+    background-color: var(--SectieAchtergrond1);
+    padding-left:1em;
+    padding-right:1em;
+}
+
+main section:nth-of-type(4) img{
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  	display: block;
+    padding: 1em;
+}
+
+main section:nth-of-type(4) h2{
+    font-family: "anton";
+    color: var(--Button);
+    font-weight: 200;
+   /* Bron uitleg over VW https://www.w3schools.com/cssref/css_units.php */
+    font-size: 6vw;
+    width: 80%;
+    align-self: start;
+    justify-self: start;
+    margin:0;
+}
+
+main section:nth-of-type(4) p{
+    font-family: "mont";
+    font-size: medium;
+    color: var(--TekstLichtZwart);
+    font-weight: 200;
+    width: 100%;
+    margin-bottom: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main section:nth-of-type(4) p:last-of-type{
+    margin-bottom: 0;
+    padding-bottom: 2em;
+}
+
+/* Section 5 */
+/* Bron: DLO FED - Werkgroep 4 Flexbox oefening 4 - Carousel - https://codepen.io/shooft/pen/QwjQGZe */
+main section:nth-of-type(5){
+    background-color: var(--SectieAchtergrond2) ;
+}
+
+main section:nth-of-type(5) h2, main section:nth-of-type(5) h3{
+    font-family: "anton";
+    font-size: 5vw;
+    justify-self: center;
+    color: var(--TekstRood);
+}
+
+main section:nth-of-type(5) h2{
+    margin-top: 0;
+}
+
+main section:nth-of-type(5) h3{
+    margin-bottom: 0;
+}
+
+main section:nth-of-type(5) ul {
+    display:flex;
+    overflow:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    overscroll-behavior-x:contain;
+    
+    gap:1em;
+    font-family: "inter";
+    color: var(--TekstRood);
+    
+    list-style-type: none;
+  }
+
+main section:nth-of-type(5) ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-basis:100%;
+    flex-shrink:0;
+    scroll-snap-align:center;
+    padding-right: 1em;
+    background-color: none;
+
+}
+
+main section:nth-of-type(5) ul li img {
+    width: 10em;
+    height: auto;
+    border-radius: 50%;
+}
+
+main section:nth-of-type(5) ul::scroll-button(*) {
+    width:3em;
+    aspect-ratio:1;
+    margin:-8em 4vw 0;
+    padding:0;
+  
+    background-color:canvas;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+  
+    font-size:1em;
+    
+    position:absolute;
+  }
+  
+  main section:nth-of-type(5) ul::scroll-button(right) {
+    /* eerst wat je ziet / dan wat je hoort */
+    content: '→' / 'Next';
+    /* ruimte van de rechterkant */
+    right:clamp(1.5rem, 5vw, 2rem);
+  }
+  
+  main section:nth-of-type(5) ul::scroll-button(left) {
+    content: '←' / 'Previous';
+    left:clamp(1.5rem, 5vw, 2rem);
+  }
+    
+  main section:nth-of-type(5) ul::scroll-button(*):disabled {
+    opacity:.5;
+  }
+  
+
+  main section:nth-of-type(5) ul:scroll-button(*) {
+    /* styling voor de buttons */
+    width:3em;
+    aspect-ratio:1;
+    margin:1em 0 0;
+
+    border-radius:50%;
+    cursor:pointer;
+
+
+    /* om de buttons te positioneren tov de lijst */
+    position:absolute;
+  }
+
+ main section:nth-of-type(5) ul {
+  /* geen scrollbar */
+  scrollbar-width:none;
+  
+  /* de wrapper voor de bolletjes aanzetten */
+  scroll-marker-group: after;
+}
+
+main section:nth-of-type(5) ul::scroll-marker-group {
+  height:3em;
+  /* beetje witruimte aan de bovenkant en zijkanten */
+  margin:1em 3.5em 0;
+  
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-content:center;
+  row-gap:.25em;
+  column-gap:.5em;
+}
+
+main section:nth-of-type(5) li::scroll-marker {
+  /* net als een after */
+  /* het attribuut komt uit de html - is voor screenreaders */
+  content: '' / 'naar' attr(data-label);
+  /* styling bolletje */
+  width: 0.5em;
+  aspect-ratio:1;
+  border-radius:50%;
+  background-color:grey;
+
+  transition:.25s;
+}
+
+main section:nth-of-type(5) li::scroll-marker:target-current {
+  background:black;
+}
+
+/* Section 6 */
+main section:nth-of-type(6) {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--SectieAchtergrond1);
+}
+
+main section:nth-of-type(6) h2{
+    font-family: "anton";
+    color: var(--TekstRood);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+main section:nth-of-type(6) p{
+    font-family: "roboto";
+    font-weight: 300;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+main section:nth-of-type(6) form label[for="name"]{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+main section:nth-of-type(6) form #name{
+    grid-column: 1;
+    grid-row: 4
+}
+
+main section:nth-of-type(6) form label[for="phone"]{
+    grid-column: 1;
+    grid-row: 5;
+}
+
+main section:nth-of-type(6) form #phone{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+main section:nth-of-type(6) form label[for="email"]{
+    grid-column: 1;
+    grid-row: 7;
+}
+
+main section:nth-of-type(6) form #email{
+    grid-column: 1;
+    grid-row: 8;
+}
+
+main section:nth-of-type(6) form label[for="subject"]{
+    grid-column: 1;
+    grid-row: 9;
+}
+
+main section:nth-of-type(6) form #subject{
+    grid-column: 2;
+    grid-row: 10;
+}
+
+main section:nth-of-type(6) form label[for="message"]{
+    grid-column: 1;
+    grid-row: 11;
+}
+
+main section:nth-of-type(6) form textarea{
+    grid-column: 1;
+    grid-row: 12;
+}
+
+main section:nth-of-type(6) button{
+    border-radius: 1.5em;
+    font-family: "epilogue";
+    font-weight: 300;
+    margin-bottom: 2em;
+    grid-column: 1;
+    grid-row: 13;
+    align-self: center;
+    justify-self: center;
+    display: block;
+    width: 60%;
+    height: 3em;
+}
+
+main section:nth-of-type(6) form{
+    font-family: "epilogue";
+    font-weight: 200;
+}
+
+main section:nth-of-type(6) h2, main section:nth-of-type(6) p, main section:nth-of-type(6) form label, main section:nth-of-type(6) button {
+    padding: 1vw;
+}
+
+main section:nth-of-type(6) form #name, main section:nth-of-type(6) form #phone, main section:nth-of-type(6) form #email, main section:nth-of-type(6) form #subject, main section:nth-of-type(6) form textarea {
+    border-left:0;
+    border-top:0;
+    border-right: 0;
+    border-bottom: 0.0625em solid;
+    width: 90%;
+    margin: 1em;
+    height: 3em;
+}
+
+main section:nth-of-type(6) form textarea, main section:nth-of-type(6) form button{
+    background-color: var(--SectieAchtergrond1);
+}
+
+/* Section 7 */
+    main section:nth-of-type(7) {
+        display: grid;
+        grid-template-rows:1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    
+    main section:nth-of-type(7) h2 {
+        font-family: "anton";
+        justify-self: center;
+        grid-row: 3/4;
+        grid-column: 1;
+        z-index: 3;
+        margin: 0;
+        font-size: 8vw;
+        color: var(--TekstWit);
+        margin-top: 0.4em;
+    }
+    
+    main section:nth-of-type(7) img{
+        width: 100%;
+        max-height: 40em;
+        z-index: -1;
+    }
+    
+    main section:nth-of-type(7) img:nth-of-type(1){
+        height: 100%;
+        grid-row: 1/3;
+        grid-column: 1;
+        object-fit: cover;
+          display: block;
+    }
+    
+    main section:nth-of-type(7) img:nth-of-type(2){
+        height: 100%;
+        grid-row: 3/5;
+        grid-column: 1;
+        object-fit: cover;
+          display: block;
+    }
+    
+    main section:nth-of-type(7) form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-self: end;
+        width: 100%;
+        height: 78%;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        grid-row: 3/5;
+        grid-column: 1;
+        color: var(--TekstZwart);
+        background-color: var(--TekstWit);
+    }
+    
+    main section:nth-of-type(7) form p{
+        grid-row: 1;
+        grid-column: 1/3;
+    }
+    
+    main section:nth-of-type(7) form label[for="Datum"]{
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+    
+    main section:nth-of-type(7) form #Datum {
+        grid-row: 3;
+        grid-column: 1/3;
+    }
+    
+    main section:nth-of-type(7) form label[for="Volwassen"]{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    
+    main section:nth-of-type(7) form #Volwassen{
+        width: 90%;
+        grid-row: 5;
+        grid-column: 1;
+    }
+    
+    main section:nth-of-type(7) form label[for="Kinderen"]{
+        grid-row: 4;
+        grid-column: 2;
+    }
+    
+    main section:nth-of-type(7) form #Kinderen{
+        width: 90%;
+        grid-row: 5;
+        grid-column: 2;
+        justify-self: end;
+    }
+    
+    main section:nth-of-type(7) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    main section:nth-of-type(7) form p{
+        display: flex;
+        justify-content: center;
+    }
+    
+    main section:nth-of-type(7) form label[for="Tijd"]{
+        grid-row: 7;
+        grid-column: 1/3;
+    }
+    
+    main section:nth-of-type(7) form #Tijd{
+        display: flex;
+        justify-content: center;
+        grid-row: 8;
+        grid-column: 1/3;
+    }
+    
+    
+    main section:nth-of-type(7) button {
+        justify-self: center;
+        font-family: "inter";
+        border:0;
+        height: 3em;
+        grid-row: 9;
+        grid-column: 1/3;
+        
+    }
+    
+    main section:nth-of-type(7) form #Datum, main section:nth-of-type(7) form #Kinderen, main section:nth-of-type(7) form #Volwassen, main section:nth-of-type(7) form #Tijd {
+        border-left:0;
+        border-top:0;
+        border-right: 0;
+        border-bottom: 0.0625em solid;
+        margin: 0.8em;
+    }
+    
+    main section:nth-of-type(7) form label, main section:nth-of-type(7) form button{
+        margin: 0.8em;
+    }
+
+   /* Verandering vanaf minimale width van 48em */
+  
+    @media (min-width:48em) {
+        main section:nth-of-type(1) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr fit-content fit-content 1fr;
+            column-gap: 4em;
+            padding-top: 8em ;
+            padding-bottom: 8em;
+        }
+        
+        main section:nth-of-type(1) img {
+            grid-column: 2;
+            grid-row: 1/5;
+            align-self: center;
+            justify-self: start;
+            width: 60%;
+            height: 90%;
+        }
+    
+        main section:nth-of-type(1) h2 {
+            grid-column: 1;
+            grid-row: 1;
+            margin: 0;
+            font-size: 5vw;
+            align-self: center;
+            justify-self: end;
+            width: 70%;
+            line-height: 1;
+        }
+    
+        main section:nth-of-type(1) p:nth-of-type(1) {
+            grid-column: 1;
+            grid-row: 2;
+            align-self: end;
+            justify-self: end;
+            width: 70%;
+            font-size: 1.2vw;
+            padding-left: 0;
+        }
+    
+        main section:nth-of-type(1) p:nth-of-type(2) {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: start;
+            justify-self: end;
+            width: 70%;
+            margin-bottom: 2em;
+            font-size: 1.2vw;
+            padding-left: 0;
+        }
+
+        main section:nth-of-type(2){
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: fit-content;
+    
+        }
+        
+        main section:nth-of-type(2) img{
+            width: 31.3125em;
+            height: 40em;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        main section:nth-of-type(2) img:nth-of-type(1){
+            grid-row: 1/4;
+            grid-column: 1;
+            z-index: -1;
+        }
+        
+        main section:nth-of-type(2) img:nth-of-type(2){
+            grid-row: 1/4;
+            grid-column: 2;
+            z-index: -1;
+        }
+        
+        main section:nth-of-type(2) img:nth-of-type(3){
+            grid-row: 1/4;
+            grid-column: 3;
+            z-index: -1;
+        }
+        
+        main section:nth-of-type(2) h2{
+            justify-self: center;
+            align-self: end;
+            width: 61.2%;
+            line-height: 1;
+            grid-row: 1;
+            grid-column: 2;
+            font-size: 6vw;
+            z-index: 0;
+            color: var(--TekstWit);
+            font-family: "anton";
+            margin-top: 1em;
+        }
+        
+        main section:nth-of-type(2) p{
+            display: flex;
+            justify-content: center;
+            align-self: start;
+            grid-row: 2;
+            grid-column: 2;
+            color: var(--TekstWit);
+            font-family: "roboto";
+            font-weight: 200 ;
+            font-size: 1em;
+            margin: 0;
+        }
+        
+        main section:nth-of-type(2) button{
+            grid-row: 3;
+            grid-column: 2;
+            z-index: 2;
+            justify-self: center;
+            width: 50%;
+            border: 0;
+            height: 3em;
+            border-radius: 1.5em;
+        }
+
+        main section:nth-of-type(3) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 0.5fr 0.5;
+        }
+    
+        main section:nth-of-type(3) h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column: 1;
+            grid-row: 1/3;
+            font-size: 6vw;
+        }
+    
+        main section:nth-of-type(3) p {
+            grid-column: 2;
+            grid-row: 1;
+            font-size: medium;
+            margin-top: 4em;
+            margin-bottom: 2em;
+        }
+    
+        main section:nth-of-type(3) button {
+            grid-column: 2;
+            grid-row: 2;
+            width: 10em;
+            height: 3em;
+            font-size: small;
+            margin-bottom: 4em;
+            align-self: start;
+            justify-self: start;
+        }
+
+    
+        main section:nth-of-type(4) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 2em;
+        }
+    
+        main section:nth-of-type(4) h2{
+            grid-row: 1;
+        }
+    
+        main section:nth-of-type(4) img{
+            grid-row: 2;
+            width: 100%;
+        }
+    
+        main section:nth-of-type(4) p{
+            width: 100%;
+            padding-bottom: 5em;
+            padding-top: 2em;
+        }
+
+        main section:nth-of-type(6){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        main section:nth-of-type(6) h2{
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
+            font-size: 5vw;
+            width: 70%;
+            grid-column: 1;
+            grid-row: 1;
+            margin: 0;
+            line-height: 1;
+            font-weight: 300;
+        }
+    
+        main section:nth-of-type(6) p{
+            grid-column: 1;
+            grid-row: 1;
+            font-size: medium;
+            margin-top: 5em;
+            align-self: start;
+            justify-self: start;
+            grid-column: 1;
+            grid-row: 2;
+            margin:0;
+            width: 60%;
+            font-weight: 300;
+        }
+    
+        main section:nth-of-type(6) form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row: 1/3 ;
+            padding-top: 5em;
+        }
+    
+        main section:nth-of-type(6) form label[for="name"]{
+            grid-column: 1;
+            grid-row: 1;
+        }
+    
+        main section:nth-of-type(6) form #name{
+            grid-column: 1;
+            grid-row: 2;
+        }
+    
+        main section:nth-of-type(6) form label[for="phone"]{
+            grid-column: 2;
+            grid-row: 1;
+        }
+    
+        main section:nth-of-type(6) form #phone{
+            grid-column: 2;
+            grid-row: 2;
+        }
+    
+        main section:nth-of-type(6) form label[for="email"]{
+            grid-column: 1;
+            grid-row: 4;
+        }
+    
+        main section:nth-of-type(6) form #email{
+            grid-column: 1;
+            grid-row: 5;
+        }
+    
+        main section:nth-of-type(6) form label[for="subject"]{
+            grid-column: 2;
+            grid-row: 4;
+        }
+    
+        main section:nth-of-type(6) form #subject{
+            grid-column: 2;
+            grid-row: 5;
+        }
+    
+        main section:nth-of-type(6) form label[for="message"]{
+            grid-column: 1;
+            grid-row: 7;
+        }
+    
+        main section:nth-of-type(6) form textarea{
+            grid-column: 1;
+            grid-row: 8;
+        }
+    
+        main section:nth-of-type(6) form button{
+            grid-column: 2;
+            grid-row: 8;
+            width: 60%;
+            justify-self: center;
+            font-size: large;
+        }
+
+        main section:nth-of-type(7) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            padding-top: 9em ;
+        }
+    
+        main section:nth-of-type(7) form, main section:nth-of-type(7) img:nth-of-type(2), main section:nth-of-type(7) h2{
+            grid-column: 2;
+            grid-row: 1;
+        }
+    
+        main section:nth-of-type(7) {
+            padding-top: 0;
+        }
+    
+        main section:nth-of-type(7) h2{
+            font-size: 4vw;
+            margin: default;
+        }
+    
+        main section:nth-of-type(7) form{
+            width: 80%;
+        }
+    }
+
+
+       /* Verandering vanaf minimale width van 64em */
+    @media (min-width:64em) {
+        header nav ul li:nth-of-type(3) a {
+            border-bottom-color: var(--Button)
+          }
+        }

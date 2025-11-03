@@ -1,0 +1,670 @@
+/* Bron Custom Properties: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties */
+:root {
+    --TekstZwart: #000;
+    --TekstLichtZwart: #4b4f58;
+    --SpanKleur: #AF4B2F;
+    --AlgemeneAchtergrond: #E8E1D8;
+    --Footer: #F4F0EE;
+    --TekstWit: #FFFFFF;
+    --HamburgerMenu: #02010173;
+    --Button: #A62C21;
+    --TekstRood: #A62C21;
+    --Navigatie: #DBBB9CAD;
+    --SectieAchtergrond1: #E8E1D8;
+    --SectieAchtergrond2: #F4F0EE;
+}
+
+/* Bron Prefers-color-scheme:dark: uitleg van docent + https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme  */
+@media (prefers-color-scheme:dark) {
+    :root {
+        --TekstZwart: #282828;
+        --SpanKleur: #703422;
+        --AlgemeneAchtergrond: #3A342E;
+        --Footer: #3D3735;
+        --TekstWit: #121212;
+        --HamburgerMenu: #4B4F58;
+        --Button: #611813;;
+        --KoppenButton: #611813;
+        --Navigatie: #6B523FAD;
+        --SectieAchtergrond1: #3A342E;
+        --SectieAchtergrond2: #3D3735;
+    }
+}
+
+/* Bron @font-face: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+@font-face {
+	font-family: "anton";
+	src: url("fonts/anton.woff2");
+  }
+
+@font-face {
+	font-family: "archivo";
+	src: url("fonts/archivo.woff2");
+}
+
+@font-face { 
+	font-family: "beba";
+	src: url("fonts/beba.woff2");
+}
+
+@font-face {
+	font-family: "inter";
+	src: url("fonts/inter.woff2");
+}
+
+@font-face {
+	font-family: "mem";
+	src: url("fonts/mem.woff2");
+}
+
+@font-face {
+	font-family: "mont";
+	src: url("fonts/mont.woff2");
+}
+
+@font-face {
+	font-family: "roboto";
+	src: url("fonts/roboto2.woff2");
+}
+
+@font-face {
+	font-family: "epilogue";
+	src: url("fonts/epilogue.woff2");
+}
+
+@font-face {
+	font-family: "worksans";
+	src: url("fonts/worksans.woff2");
+}
+
+
+body{
+  margin: 0%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* Bron: Hide Content: https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {				
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 0.0625em;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.0625em;	
+}
+
+/* Bron: Skip to Content link: https://css-tricks.com/how-to-create-a-skip-to-content-link/ */
+.skip-link {
+background: var(--Button);
+color: var(--TekstWit);
+font-weight: 200;
+left: -999em;
+top: 2em;
+padding: 0.625em;
+position: absolute;
+transform: translateY(0%);
+font-family: "beba";
+}
+
+.skip-link:focus {
+left: 0em;
+transform: translateY(100%);
+}
+
+.skip-link {
+transition: transform 0.3s;
+}
+
+/* header */
+/* Bron Header; https://codepen.io/shooft/pen/Qwjaojy + hulp van docent */
+header {
+  top:0;
+  z-index: 100;
+  position: relative;
+}
+
+/* nav */
+header nav {
+  width: 100%;
+  position: fixed;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  background: var(--Navigatie);
+  display:grid;
+  /* Bron max-content: https://developer.mozilla.org/en-US/docs/Web/CSS/max-content */
+  grid-template-columns:1fr max-content 1fr;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+/* logo */
+header nav > img{
+  width: 15vw;
+  height:auto;
+}
+
+
+
+/* menu button */
+header nav button:nth-of-type(1) {
+  background: none;
+  border: none;
+  padding:0;
+  background-color:var(--HamburgerMenu);
+}
+
+header nav button:nth-of-type(1) img {
+  display:block;
+  width:2em;
+}
+
+/* als het menu open is */
+header nav.toonMenu button:nth-of-type(1) img {
+  /* url kruisje: https://assets.codepen.io/274456/ui-icon-cross.svg */
+  content:url("../images/cross-svgrepo-com.svg");
+}
+
+
+
+/* het menu */
+header nav ul {
+  display:flex; /* hiermee zijn de andere grid-properties niet meer relevant */
+  flex-direction: column;
+
+  margin:0;
+  padding:0 1em;
+  list-style-type:"";
+
+  position:absolute;
+  left:50%;
+  top:100%;
+  translate:-50%;
+
+  height:0;
+
+  overflow:hidden;
+  font-family: "anton";
+  transition: 1s;
+}
+
+header nav ul a{
+  text-decoration: none;
+  color: var(--Button);
+}
+
+header nav ul li:hover {
+  transition: ease 0.8s;
+  background-color: var(--HamburgerMenu);
+}
+
+/* als het menu open is */
+header nav.toonMenu  ul {
+  height:auto;
+  padding:1em;
+  background: var(--Navigatie);
+}
+
+/* cart button */
+header nav button:nth-of-type(2) {
+  width:3em;
+  background-color: transparent;
+  justify-self: end;
+  border: 0;
+}
+
+/* svg */
+header nav button:nth-of-type(2) svg {
+  position: relative;
+  justify-self: center;
+  width:100%;
+  fill: var(--Button);
+  align-self: center;
+}
+
+/* Deze span hoort bij de svg */
+/* bron: uitleg van docent */
+header nav button:nth-of-type(2) span {
+  position: absolute;
+  top:0;
+  right:3;
+  border-radius: 50%;
+  background-color: var(--SpanKleur);
+  color: var(--TekstRood);
+  font-size: medium;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-top: 0.2em;
+
+}
+
+/* book your table button */
+header nav button:nth-of-type(3) {
+  background-color: var(--Button);
+  /* justify-content: end; */
+  font-family: "worksans";
+  font-weight: 600;
+  color: var(--TekstWit);
+  font-size: small;
+  display: none;
+}
+  
+
+ul{
+	list-style-type: none;
+}
+
+  main section:nth-of-type(8) {
+     /* Bron uitleg over grid: https://www.w3schools.com/css/css_grid.asp */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+  }
+  
+  main section:nth-of-type(8) p{
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    font-size: 3vw;
+    margin-bottom: 0;
+    padding-left: 10%;
+    font-family: "roboto";
+    color: var(--TekstZwart);
+    font-weight: 100;
+  }
+  
+  main section:nth-of-type(8) h2{
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    font-size: 8vw;
+    margin-top: 0;
+    padding-left: 10%;
+    font-family: "anton";
+    color: var(--TekstZwart);
+    font-weight: 300;
+  }
+  
+  main section:nth-of-type(8) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    background-color: var(--SectieAchtergrond2);
+  }
+  
+  main section:nth-of-type(8) p{
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    font-size: 3vw;
+    margin-bottom: 0;
+    padding-left: 10%;
+    color: var(--TekstZwart);
+    font-family: "roboto";
+    font-weight: 100;
+  }
+  
+  main section:nth-of-type(8) h2{
+    grid-column: 1;
+    grid-row: 2;
+    /* Bron aling-self:https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-self */
+    align-self: start;
+    font-size: 8vw;
+    margin-top: 0;
+    padding-left: 10%;
+    font-family: "anton";
+    color: var(--TekstZwart);
+    font-weight: 300;
+  }
+  
+  main section:nth-of-type(8) img {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+
+  /* FOOTER */
+
+footer{
+	background-color: var(--SectieAchtergrond2);
+	display: grid;
+	gap:1em;
+	padding:1em;
+}
+
+footer section h3{
+	font-family: "anton";
+	color: var(--TekstZwart);
+	font-weight: 100;
+}
+
+footer section p, button{
+	font-family: "roboto";
+}
+
+
+footer > img:nth-of-type(1) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	width: 60%;
+}
+
+footer section p, footer section:nth-of-type(2) ul li {
+	padding :0;
+	font-family: "roboto";
+	margin-bottom: 1em;
+	color:var(--TekstZwart);
+	font-weight: 300;
+}
+
+footer section strong{
+	font-weight: 600;
+}
+
+
+footer section:nth-of-type(4) {
+	display: flex;
+	flex-direction: column;
+}
+
+footer ul:nth-of-type(1) li:nth-of-type(2) ul{
+	padding: 0;
+}
+
+/* links onderaan in de footer */
+footer > ul {
+	padding:0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+
+footer input{
+	line-height: 2;
+	margin-bottom: 1em;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+footer section:nth-of-type(2) ul{
+	padding-left: 0;
+}
+
+footer button:nth-of-type(1){
+	align-self: start;
+	padding-left: 0;
+}
+
+footer button:nth-of-type(3), footer button:nth-of-type(2){
+	margin-bottom: 0;
+}
+
+footer button{
+	border: 0;
+	font-family: "roboto";
+	font-size: 1em;
+	background-color: var(--SectieAchtergrond2);
+	font-weight: 200;
+}
+
+/* bron @Media: https://www.w3schools.com/cssref/atrule_media.php */
+/* Verandering vanaf minimale width van 34em */
+
+@media (min-width: 34em) {
+	footer {
+		    grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Verandering vanaf minimale width van 38em */
+
+@media (min-width: 38em) {
+		footer img:nth-of-type(1){
+			  padding-left: 0;
+		}
+	}
+
+/* Verandering vanaf minimale width van 42em */
+
+@media (min-width:42em) {
+    header nav {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+  
+    header nav ul{
+       left:40%;
+    }
+  
+    header nav > img{
+        width: 14vw;
+        height:auto;
+        grid-column: 1;
+        grid-row: 1;
+    }
+  
+    header nav button:nth-of-type(1){
+        grid-column: 2;
+        grid-row: 1;
+         
+    }
+  
+    header nav button:nth-of-type(2) {
+        grid-row: 1;
+        grid-column: 3;
+        justify-self: center;
+    }
+  
+    header nav button:nth-of-type(2) svg {
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    header nav button:last-of-type{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-top: 2em;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-bottom: 2em;
+        border: 0 ;
+        width: 15em;
+        height: 3em;
+        letter-spacing: 0.2rem;
+        grid-column: 4;
+        grid-row: 1;
+  
+  }
+  }
+
+/* Verandering vanaf minimale width van 48em */
+@media (min-width: 48em) {
+
+    main section:nth-of-type(8) {
+      /* Bron uitleg over grid: https://www.w3schools.com/css/css_grid.asp */
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-template-rows: 0.5fr 1fr;
+    }
+  
+    main section:nth-of-type(8) img{
+      grid-column: 2;
+      grid-row: 1/-1;
+      height: 100%;
+      /* Uitleg over Object-fit en Display:block Bron ChatGPT: prompt:hoe zeg je dat de foto de hele kolom moet inemen css? */
+      object-fit: cover;
+      display: block;
+    }
+  
+    main section:nth-of-type(8) h2{
+      width: 80%;
+      line-height: 1.2;
+      font-size: 6vw;
+    }
+  
+  main section:nth-of-type(8) p{
+      font-size: 1.2vw;
+  }  
+
+	footer {
+		  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		  padding-left: 5%;
+		  padding-right: 5%;
+	}
+
+	footer > img:nth-of-type(1){
+		  grid-column-start: 1;
+		  grid-column-end: 2;
+		  width: 90%;
+		  padding:1em;
+		  padding-top: 0;
+
+	}
+
+	footer section:nth-of-type(1) p:nth-of-type(1), footer section:nth-of-type(1) p:nth-of-type(2), footer section:nth-of-type(1) p:nth-of-type(3){
+		  margin: 0;
+	}
+
+	footer section h3{
+		  margin-top: 0;
+		  line-height: 1;
+	}
+
+	footer section:nth-of-type(4) p{
+		  margin-top: 0;
+	}
+
+	footer section:nth-of-type(4){
+		  width: 95%;
+	}
+
+	footer section:nth-of-type(2) ul li {
+		  font-family: "roboto";
+		  padding-bottom: 1em;
+	}
+
+	footer section:nth-of-type(2) ul{
+		  font-family: "roboto";
+		  padding:0
+	}
+
+	footer ul:last-child{
+	    margin:0;
+	}
+
+	footer ul:last-child button{
+		  margin-top: 10em;
+	}
+
+}
+
+/* Verandering vanaf minimale width van 64em*/
+@media (min-width:64em) {
+header nav {
+    display: flex;
+    translate:unset; 
+    background:none;
+    gap: 1em;
+    justify-content: space-between;
+    background: var(--Navigatie);
+}
+
+header nav > img{
+    width: 14vw;
+    height:auto;
+}
+
+
+header nav button:nth-of-type(1){
+    display:none;
+   
+}
+
+header nav button:last-of-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 2em;
+    border: 0 ;
+    width: 15em;
+    height: 3em;
+    letter-spacing: 0.2rem;
+}
+
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    position:static;
+    translate:0;
+    height: auto;
+    overflow:visible;
+    padding-top: 1em;
+    gap:2em;
+}
+
+header nav ul li {
+    display:flex;
+}
+
+header nav ul li:hover {
+    background-color: transparent;
+    transition: ease 0.8s;
+}
+
+header nav ul li a {
+    display:flex;
+    border-bottom: 0.25em solid transparent;
+    /* Bron uitleg over transition: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition */
+    transition: border-color 0.2s ease 0.2s;
+    /* Bron uitleg over text-decoration: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-decoration */
+    text-decoration: none;
+    font-size:large;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+header nav ul li a:visited {
+   text-decoration: none;
+    color: var(--Button);
+}
+
+header nav ul li a:hover {
+   text-decoration: none;
+    border-color: var(--Button);
+}
+
+header nav ul li a:focus {
+    text-decoration: none;
+}
+
+header nav ul li a:visited {
+    text-decoration: none;
+}
+
+header > a:last-of-type {
+    flex-direction:column;
+}
+
+header nav button:nth-of-type(2) span{
+   padding-left: 0.3em;
+   padding-right: 0.3em;
+   margin-top: 0.2em;
+  }
+}
