@@ -99,7 +99,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik loop op dit moment nog nergens tegen aan. Ik mijn html pagina volledig gemaakt en wil nu graag weten hoe ik deze kan gaan stijlen.
 
 
   ### Agenda voor meeting
@@ -131,7 +131,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Font Face is gelukt en ik begin nu een beetje meer te leren over Grid. Ik vind het hamburgermenu erg lastig.
 
 
   ### Agenda voor meeting
@@ -164,7 +164,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - Er wordt gebruik gemaakt van plain language op beide websites.
+  - De buttons en linksjes zijn unique in beide gevallen.
+  - Bij het valideren van de html gaf het origineel veel errors, dit was bij mijn website niet het geval.
+  - Lang attributen zijn aanwezig + unique titel
+  - Je kan bij beide tabben door de elementen op de website.
+  - Bij beide websites kan je het scherm rotaten. 
+  - De buttons en links zijn in beide gevallen makkelijk te activeren en er zit genoeg wit ruimte tussen de elementen.
+  - De horizontal scrolling is er uit.
+  - De origninele website heeft geen heading elementen om de content te introduceren of een 1 h1 per pagina. Dit is nu bij mij verbeterd.
+  - Op de originele website wordt geen gebruik gemaakt van list items, dit heb ik verbeterd.
+  - Alle img elememnten hebben nu wel een alt element.
+  - Alle button elementen worden nu gebruikt voor buttons
+  - A elementen worden nu gebruikt voor links.
+  - Er is een darkmode nu toegevoegd en de text size kan naar 200%
+  - Er is een @media prefers-reduced-motion toegevoegd.
+  - De color contrast is aanwezig voor normale en grote tekst.
+
+  - Uitwerking eerste (Week 1) en tweede keer testen (week 9) van de WCAG checklist
+  <img src="readme-images/WCAG-1.png" width="375px" alt="Foto 1 van de WCAG checklist">
+  <img src="readme-images/WCAG-2.png" width="375px" alt="Foto 2 van de WCAG checklist">
+  <img src="readme-images/WCAG-3.png" width="375px" alt="Foto 3 van de WCAG checklist">
+  <img src="readme-images/WCAG-4.png" width="375px" alt="Foto 4 van de WCAG checklist">
+  <img src="readme-images/WCAG-5.png" width="375px" alt="Foto 5 van de WCAG checklist">
 
 </details>
 
@@ -178,8 +200,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Het werken met grid gaat steeds beter en het wil nog niet volledig lukken met het hamburger menu
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -219,17 +240,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   - Wat goed ging was het werken met grid. Deze tool was volledig nieuw voor mij en ik heb nu het gevoel, dat ik het goed beheers. Zo moest ik voor een sectie aan de slag met foto's die allemaal net ander voormaatje hadden, die elkaar niet mochten overlappen, waarbij aan de zijkant de tekst netjes uitgelijnt onder elkaar moest staan. Dit was goed gelukt.
-  - <img src="readme-images/PiattiHome-S3.png" width="375px" alt="top">
+  - <img src="readme-images/PiattiHome-S3.png" width="375px" alt="De derde sectie van de home pagina van Piatti">
 
   - Wat ook goed ging was het maken van een verschillende formulieren en deze in stijl van piatti vormgeven. Ik heb nu geleerd, dat je met input veel verschillende opties hebt om een formulier samen te stellen en verschillende teksten kan toevoegen met een label.
-  - <img src="readme-images/PiattiHome-S4.png" width="375px" alt="top">
+  - <img src="readme-images/PiattiHome-S4.png" width="375px" alt="De vierde sectie van de home pagina van Piatti">
 
   ### Dit was lastig/Is niet gelukt:
   - Ik heb geprobeerd een carousel te maken met 5 foto's naast elkaar, die om de paar seconde eentje naar links verplaats en er een nieuwe foto voor in de plaats kwam. Net zoals bij de piatti website, dit is alleen niet gelukt. Ik heb met de code van de carousel opdracht wel een enkele foto carousel gemaakt. Dit was ook de bedoeling voor klein scherm, maar 5 foto's naast elkaar die om de paar seconde en nieuwe foto inbeeld krijgen is niet gelukt. Dit werd met javascrip gemaakt en dit is mij niet gelukt. Ik heb wel pijltjes toevoegt met behulp van de carousel opdracht, die we in de les hebben gedaan. Dit hielp om makkelijker door het carousel heen te gaan i.p.v. dat je op een klein bolletje moet drukken.
   - Dit is wat ik wilde maken:
-  - <img src="readme-images/CarouselOrigineel.png" width="375px" alt="bummer">
+  - <img src="readme-images/CarouselOrigineel.png" width="375px" alt="Carousel van de originele website van Piatti">
   - Dit is wat het is geworden:
-  - <img src="readme-images/CarouselJoep.png" width="375px" alt="bummer">
+  - <img src="readme-images/CarouselJoep.png" width="375px" alt="bumCarousel van de namaak website van Piattimer">
 </details>
 
 
